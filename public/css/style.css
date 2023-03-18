@@ -118,14 +118,14 @@
   align-items: center;
   justify-content: space-between;
 }
-.count h1{
+.count h1 {
   font-size: 75px;
   line-height: 40%;
   text-align: center;
 }
-.counter-title{
+.counter-title {
   text-align: center;
-  color: #302A2AB2;
+  color: #302a2ab2;
   font-size: 22px;
   letter-spacing: -1.5px;
 }
@@ -136,6 +136,20 @@
   line-height: 100%;
   width: 80%;
 }
-.about img{
+.about img {
   width: 75%;
+}
+.about button {
+  font-size: 20px;
+  background-color: var(--primary-light);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.5s;
+  border: none;
+  padding: 10px 40px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.about button:hover{
+  background-color: var(--primary-main);
 }
