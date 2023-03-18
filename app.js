@@ -1,5 +1,4 @@
 import express from 'express';
-import http from 'http';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -7,16 +6,20 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
 const app = express();
-const server = http.createServer(app);
+app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'));
 
-app.get("/", async (req, res) => {
-        res.sendFile(__dirname + "/public/src/home.html");
+app.get("/", function (req, res) {
+    res.render("home");
 });
-app.get("/contact", async (req, res) => {
-    res.sendFile(__dirname + "/public/src/contact.html");
+app.get("/contact", function (req, res) {
+    res.render("contact");
+});
+app.get("/:id", async (req, res) => {
+    var name = req.params.id;
+    res.sendFile(__dirname + "/public/src/singlecar.html", { headers: { message: 'Users Show', data: name } });
 });
 
-server.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log("Server started");
 })
