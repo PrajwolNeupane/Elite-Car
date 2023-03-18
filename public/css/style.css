@@ -12,7 +12,7 @@
   position: sticky;
   width: 84%;
   padding: 15px 8%;
-  background-color: var(--primary-light);
+  background-color: var(--primary-main);
   justify-content: space-between;
   align-items: center;
   top: 0px;
@@ -33,7 +33,6 @@
   padding: 0px 8%;
   height: calc(100vh - 83px);
   background: linear-gradient(
-    var(--primary-light),
     var(--primary-main),
     var(--primary-main),
     var(--primary-light)
@@ -69,17 +68,74 @@
   line-height: 90%;
   color: var(--text-main);
 }
-.header-info button{
-    font-size: 20px;
-    background-color:var(--secondary-light) ;
-    color: var(--text-main);
-    cursor: pointer;
-    transition: .5s;
-    border: none;
-    padding: 10px 40px;
-    letter-spacing: 2px;
-    font-weight: 400;
+.header-info button {
+  font-size: 20px;
+  background-color: var(--secondary-light);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: 0.5s;
+  border: none;
+  padding: 10px 40px;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
-.header-info button:hover{
-    background-color:var(--secondary-main) ;
+.header-info button:hover {
+  background-color: var(--secondary-main);
+}
+.search {
+  width: 84%;
+  padding: 0px 8%;
+  height: calc(100vh - 83px);
+  background: linear-gradient(
+    var(--primary-light),
+    var(--primary-main),
+    var(--primary-main)
+  );
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.about {
+  padding: 50px 8%;
+  height: 100%;
+  width: 84%;
+  background: linear-gradient(180deg, #f4f5f8 0%, #e6e8ec 100%);
+  align-items: center;
+  gap: 50px;
+}
+.about h2 {
+  background: linear-gradient(
+    180deg,
+    #302a2a 0.6%,
+    #302a2a 2.6%,
+    rgba(48, 42, 42, 0.73) 96.87%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+}
+.count {
+  width: 70%;
+  align-items: center;
+  justify-content: space-between;
+}
+.count h1{
+  font-size: 75px;
+  line-height: 40%;
+  text-align: center;
+}
+.counter-title{
+  text-align: center;
+  color: #302A2AB2;
+  font-size: 22px;
+  letter-spacing: -1.5px;
+}
+.about p {
+  color: var(--primary-light);
+  text-align: center;
+  font-size: 20px;
+  line-height: 100%;
+  width: 80%;
+}
+.about img{
+  width: 75%;
 }

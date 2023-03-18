@@ -33,11 +33,21 @@ p{
 a{
     text-decoration: none;
 }
+.counter-title{
+    font-weight: 500;
+    font-size: 25px;
+}
 .blue-main{
     color: var(--secondary-main);
 }
 .blue-light{
     color: var(--secondary-light);
+}
+.orange{
+    color: var(--other-yellow);
+}
+.purple{
+    color: var(--other-purple);
 }
 .logo{
     font-size: 35px;
