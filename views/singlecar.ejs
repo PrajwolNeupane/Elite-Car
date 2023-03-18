@@ -21,10 +21,25 @@
       content="Elite Car Showroom is a premium car dealership located in the heart of Kathmandu, Nepal. The showroom offers a wide range of cars to choose from, including both new and used models from popular brands such as Toyota, Honda, Hyundai, and more.The Elite Car Showroom aims to provide a unique car buying experience to its customers by offering quality cars, competitive pricing, and exceptional customer service. The showroom has a team of experienced sales representatives who are dedicated to helping customers find the car that best fits their needs and budget.In addition to car sales, the Elite Car Showroom also provides financing options for customers who need assistance in purchasing a car. The showroom also has a state-of-the-art service center that offers maintenance, repair, and after-sales support to ensure that customers can keep their cars in top condition.Overall, the Elite Car Showroom is a reliable and trustworthy car dealership that provides top-notch cars and excellent customer service to its clients."
     />
     <!-- <meta http-equiv="refresh" content="6"/> -->
-    <title>Elite Car</title>
+    <title><%= data.title %></title>
   </head>
   <body>
-    <h1></h1>
+    <%- include('./components/nav') %>
+    <div class="car-detail flex-col">
+      <h3 class="blue-main">
+        <%= data.title %><br />
+        <div class="line"></div>
+      </h3>
+      <div class="content-data flex-row">
+        <div class="flex-col" style="width: 50%; gap: 30px">
+          <p><%= data.content %></p>
+          <h4><%= data.price%></h4>
+          <button>Buy Now</button>
+        </div>
+        <img src="<%= data.img %>" />
+      </div>
+    </div>
+    <%- include('./components/footer') %>
   </body>
   <script src="../js/script.js" defer type="module"></script>
   <script src="../js/animation.js" defer type="module"></script>

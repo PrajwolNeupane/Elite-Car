@@ -1,6 +1,7 @@
 import express from 'express';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { carData } from './public/js/util.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -15,9 +16,13 @@ app.get("/", function (req, res) {
 app.get("/contact", function (req, res) {
     res.render("contact");
 });
-app.get("/:id", async (req, res) => {
-    var name = req.params.id;
-    res.sendFile(__dirname + "/public/src/singlecar.html", { headers: { message: 'Users Show', data: name } });
+app.get("/:id", function (req, res) {
+    try {
+        var id = Number(req.params.id);
+        res.render('singlecar.ejs', { data: carData[id] });
+    }catch(e){
+        
+    }
 });
 
 app.listen(process.env.PORT || 5000, () => {
