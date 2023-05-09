@@ -22,7 +22,7 @@ app.get("/contact", function (req, res) {
 app.get("/:id", function (req, res) {
     try {
         var id = Number(req.params.id);
-        res.render('singlecar.ejs', { data: carData[id] });
+        res.render('singlecar', { data: carData[id] });
     }catch(e){
         
     }
