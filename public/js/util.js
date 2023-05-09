@@ -31,7 +31,7 @@ export const carData = [
         title: "Mercedes Benz amg G63",
         content: "The G63 has a fuel economy of 13 city/15 highway mpg.The G63 is equipped with a 9-speed automatic transmission.The interior of the G63 is luxurious and spacious.The car has impressive technology features, including a 12.3-inch infotainment system",
         price: "$160,000",
-        img: "../images/Bentley _Continental_GT.png"
+        img: "../images/Mercedes_Benz_AMG_G63.png"
 
     },
     {

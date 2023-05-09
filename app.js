@@ -13,6 +13,9 @@ app.use(express.static(__dirname + '/public'));
 app.get("/", function (req, res) {
     res.render("home");
 });
+app.get("/service", function (req, res) {
+    res.render("service");
+});
 app.get("/contact", function (req, res) {
     res.render("contact");
 });
