@@ -3,15 +3,15 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { carData } from './public/js/util.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+// const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
 const app = express();
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-  });
-// app.set('view engine', 'ejs')
-// app.use(express.static(__dirname + '/public'));
+// app.get('/', (req, res) => {
+//     res.send('Hello World!');
+//   });
+app.set('view engine', 'ejs')
+app.use(express.static('public'));
 
 // app.get("/", function (req, res) {
 //     res.render("home");
